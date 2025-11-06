@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:title" content="liburtc">
+  <meta property="og:description" content="Tiny WebRTC library for embedded systems">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/style.css?3">
+  <title>liburtc.org</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><img alt="logo" class="light" src="/logo.png" width="48" height="48"> liburtc</h1>
+      <p>A small-footprint WebRTC native C library for IP cameras and embedded systems </p>
+    </div>
+  </header>
+
+  <hr>
+
+  <main>
+    <p>
+      <strong>liburtc</strong>(&#956;RTC or microRTC) is a minimal WebRTC library for embedded systems and microcontrollers. It is <em>lightweight</em>, <em>portable</em>, and <em>free</em>.
+    </p>
+
+    <p>
+      In contrast to other WebRTC implementations, it aims to be nimble, with a small footprint, minimal dependencies, and simple build process. It does <em>not</em> aim to implement all parts of WebRTC, but rather only those commonly used within embedded devices, such as IP cameras. For instance, H.264 is the only supported video codec, and there is no support for software acoustic echo cancellation (AEC).
+    </p>
+
+    <h2>Getting Started</h2>
+
+    <pre>git clone https://github.com/liburtc/liburtc.git</pre>
+
+    Browse git: <a href="//github.com/liburtc/liburtc">main</a>
+
+    <h2>Design Goals</h2>
+
+    <ul>
+      <li>Single local video track (ITU-T H.264 codec only)</li>
+      <li>Single local audio track (ITU-T G.711 / Opus)</li>
+      <li>Answer only (no <code>createOffer</code> support)</li>
+      <li>Data channels support</li>
+      <li>Trickle ICE support</li>
+      <li><a href="//tools.ietf.org/html/rfc5389">STUN</a> support for server reflexive candidate discovery</li>
+      <li>NACK retransmission</li>
+      <li>Congestion control</li>
+      <li>Ephemeral <a href="//tools.ietf.org/html/rfc6762">mDNS</a> host candidates and mDNS server</li>
+      <li>Event-loop concurrency model</li>
+      <li>Small footprint (&lt;100KB)</li>
+      <li>Minimal dependencies (only libcrypto for DTLS and RTP encryption)</li>
+      <li>Autotools build system</li>
+      <li>ANSI C99 implementation</li>
+      <li>BSD license</li>
+    </ul>
+
+    <h2>Support</h2>
+    <p>For discussion, support, or to file a bug, please use the <a href="https://github.com/liburtc/liburtc/issues">issues</a> page. Patches are welcome. To submit a patch, please open a <a href="https://github.com/liburtc/liburtc/pulls">pull request</a>.</p>
+  </main>
+
+  <hr>
+
+  <footer>Copyright 2022-2025 <a href="//liburtc.org/">liburtc.org</a>. All rights reserved.</footer>
+</body>
+</html>
